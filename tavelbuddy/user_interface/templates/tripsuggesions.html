@@ -1,0 +1,82 @@
+{% extends 'user_profile.html' %}
+{% block content %}
+<style>
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-top: 20px;
+    }
+    
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    .form-field label {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      font-size: 16px;
+      padding: 10px;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      width: 100%;
+    }
+    
+    .form-field textarea {
+      height: 150px;
+    }
+    
+    .save-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    
+    .save-button:hover {
+      background-color: #3e8e41;
+    }
+    </style>
+    
+    <div class="form-container">
+      <form>
+        <div class="form-field">
+          <label for="trip_name">Trip Name: {{trip_name}}</label>
+        </div>
+        <div class="form-field">
+          <label for="destination_name">Destination Name: {{destination_name}}</label>
+        </div>
+        <div class="form-field">
+          <label for="from_date">From Date: {{from_date}}</label>
+        </div>
+        <div class="form-field">
+          <label for="duration">Duration:{{duration}}</label>
+        </div>
+        <div class="form-field">
+          <label for="trip_type">Trip Type:{{trip_type}}</label>
+        </div>
+        <div class="form-field">
+          <label for="interest">Interest: {{interest}}</label>
+        </div>
+        <div class="form-field">
+          <label for="itinerary">Itinerary:</label>
+          <textarea id="itinerary" name="itinerary" required>{{itinerary}}</textarea>
+        </div>
+      </form>
+      <button class="save-button">Save</button>
+    </div>
+    
+{% endblock %}

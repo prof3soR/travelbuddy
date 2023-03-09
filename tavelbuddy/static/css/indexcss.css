@@ -1,0 +1,125 @@
+/* Hero section */
+.hero-image {
+    background-image: url('https://images.unsplash.com/photo-1677247191292-4e1791c4ebef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2831&q=80');
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: relative;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  
+  .hero-text h1 {
+    font-size: 5em;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .hero-text p {
+    font-size: 2em;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  /* Search Container */
+
+  .search-container {
+    margin-top: 50px;
+    width: 80%;
+   
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1676809728796-d10d89c97e0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .search-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input[type=text] {
+    width: 70%;
+    padding: 15px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 30px;
+    box-sizing: border-box;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+  }
+  
+  .search-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-dates,
+  .search-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .search-dates label,
+  .search-options label {
+    font-size: 18px;
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  .search-dates input[type=date],
+  .search-options select {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 30px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+  }
+  
+  button[type=submit] {
+    background-color: #00a0d2;
+    position: relative;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type=submit]:hover {
+    background-color: #0072a6;
+  }
+  

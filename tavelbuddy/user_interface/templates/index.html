@@ -1,20 +1,9 @@
+
+
 {% extends 'base.html' %}
 {% block content %}
 
-<h1 style="margin: 2rem;"><center>Welcome to Travelbuddy</center></h1>
+<h1>home page</h1>
 
 
-
-<form method="post">
-    {% csrf_token %}
-    <center>
-    <input type="text" placeholder="Destination" name="Destination">
-    <input type="text" placeholder="With (friends,family,ext..)" name="type"><br><br>
-    <label for="fromdate">From</label>
-    <input type="date"  name="fromdate" >
-    <label for="todate">to</label>
-    <input type="date"  name="todate"><br><br>
-    <button type="submit" >Suggest</button>
-</center>
-</form>
 {% endblock %}

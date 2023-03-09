@@ -1,0 +1,55 @@
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		nav {
+			background-color: #333;
+			height: 100%;
+			width: 200px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			overflow-x: hidden;
+			padding-top: 20px;
+		}
+		nav a {
+			display: block;
+			color: #f2f2f2;
+			padding: 16px;
+			text-decoration: none;
+		}
+		nav a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+		.fa {
+			margin-right: 10px;
+		}
+		.main {
+			margin-left: 200px;
+			padding: 20px;
+			font-size: 20px;
+		}
+	</style>
+
+<body>
+
+	<nav>
+		<a href="{% url 'plantrip' %}"><i class="fa fa-plane"></i>Plan new trip</a>
+		<a href="{% url 'mytrips' %}"><i class="fa fa-suitcase"></i>My trips</a>
+		<a href="#"><i class="fa fa-map-marker"></i>Add a secret spot</a>
+		<a href="#"><i class="fa fa-star"></i>Review a place</a>
+		<a href="#"><i class="fa fa-sign-out"></i>Logout</a>
+	</nav>
+
+	<div class="main">
+		
+        
+{% block content %}
+<center> <h1>Welcome {{ name }}</h1>
+    <p>We are so glad to have you here</p></center>
+{% endblock %}
+
