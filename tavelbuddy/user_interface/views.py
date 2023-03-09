@@ -2,20 +2,6 @@ from django.shortcuts import render,redirect
 from django.views import View
 from .models import *
 # Create your views here.
-def prompt_openai(prompt):
-    import openai
-    openai.api_key ="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"
-    response = openai.Completion.create(
-    model="text-davinci-003",
-    prompt=prompt,
-    temperature=0,
-    max_tokens=512,
-    top_p=1,
-    frequency_penalty=0.5,
-    presence_penalty=0
-    )
-      
-    return response.choices[0].text
 
 class index(View):
     def get(self,request):
