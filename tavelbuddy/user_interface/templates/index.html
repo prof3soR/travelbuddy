@@ -1,20 +1,108 @@
 {% extends 'base.html' %}
+
 {% block content %}
+{% load static %}
 
-<h1 style="margin: 2rem;"><center>Welcome to Travelbuddy</center></h1>
+  <!-- Carousel section -->
 
+  <div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="{%static '\images\img7.jpg' %}" class="d-block w-100" alt="..." height="650" width="1000">
+        <div class="carousel-caption d-none d-md-block">
+          <text align-center>Explore,Discover,Travle</text>
+          <h1 class="animate__animated animate__fadeInDown">First slide label</h1>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="{%static '\images\img6.jpg' %}" class="d-block w-100" alt="..."  height="600" width="1000">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{%static '\images\img5.jpg' %}" class="d-block w-100" alt="..."  height="600" width="1000">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
 
+  <!-- Benefits section -->
+  <!--
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Plan Your Trip!</h2>
+        <p class="lead">Our website is dedicated to help in planning a trip,where users can select their interested categories and they can plan their trip based on their type(like solo,family,friends etc.)It also suggest you flight,hotel bookings and some places you have to visit within the duration.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="{%static '\images\img3.jpg' %}" alt="Get Your Food to Go!" class="img-fluid rounded">
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Quick and Easy</h2>
+        <p class="lead">Our website is designed to be simple and easy to use. Just to give suggestions and it provides a user friendly application where user can plan the trip with his selected pacakge.</p>
+      </div>
+    </div>
+    </div>
+<!-- Third session -->
+ <!-- 
+<section class="py-5 bg-body-tertiary">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="text-primary mb-4">Work Process</h2>
+        <p class="mb-4">Our website provides a easy process for user to plan his trip.First user has to login to the website and then user has to fill the deatils of the trip,user can save and modify the itinerary,this application also suggest you flight,hotel bookings and some places you have to  visit within duration.The user can plan the trip with his his own package.Before deciding the trip period user can forecast the weather of the place.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="{%static '\images\img2.jpg' %}" alt="How it works" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
 
-<form method="post">
-    {% csrf_token %}
-    <center>
-    <input type="text" placeholder="Destination" name="Destination">
-    <input type="text" placeholder="With (friends,family,ext..)" name="type"><br><br>
-    <label for="fromdate">From</label>
-    <input type="date"  name="fromdate" >
-    <label for="todate">to</label>
-    <input type="date"  name="todate"><br><br>
-    <button type="submit" >Suggest</button>
-</center>
-</form>
+<!-- Fourth session -->
+<!--
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{%static '\images\img5.jpg' %}"alt="Benefits" class="img-fluid">
+      </div>
+      <div class="col-md-5">
+        <h2 class="text-primary mb-4">Benefits of using our website</h2>
+        <ul class="list-unstyled">
+          <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Easy and convenient</li>
+          <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Customizable options for planning a low-budget trip</li>
+          <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Quick and efficient</li>
+          <li class="mb-3"><i class="fas fa-check text-success me-3"></i>Provides WeatherForecasting</li>
+          <li class="mb-3"><i class="fas fa-check text-success me-3"></i>User friendly</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+*<!-- Fifth session --> 
+
 {% endblock %}

@@ -105,7 +105,7 @@ class plantrip(View):
             return render(request, 'plantrip.html', context)
         import openai
         # Generate trip itinerary using OpenAI's API
-        openai.api_key = "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"
+        openai.api_key = "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"
         prompt = "You're planning a trip to {destination} for {duration}. Create an itinerary that includes must-do activities and places to visit each day".format(destination=destination_name,duration=duration)
         response = openai.Completion.create(
             engine="text-davinci-002",
@@ -143,3 +143,5 @@ class tripsuggestions(View):
     def get(self,request):
         return render(request,'tripsuggesions.html')
     
+def trip_advisor_api():
+    api_key="0EF8ADC491AD46F2BC7483B7FE372029"
